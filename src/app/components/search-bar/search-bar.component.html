@@ -1,0 +1,29 @@
+<div class="container">
+  <div>
+    <label>Restaurant Name</label>
+    <input type="text" [(ngModel)]="search.name" (keyup)="changesHandler()"/>
+  </div>
+  <div>
+    <label>Customer Rating</label>
+    <select [(ngModel)]="search.rating" (change)="changesHandler()">
+      <option value=""></option>
+      <option value="1">1 star</option>
+      <option value="2">2 stars</option>
+      <option value="3">3 stars</option>
+      <option value="4">4 stars</option>
+      <option value="5">5 stars</option>
+    </select>
+  </div>
+  <div>
+    <label>Distance</label>
+    <input type="number" [(ngModel)]="search.distance" min="1" max="10" step="1" (change)="changesHandler()">
+  </div>
+  <div>
+    <label>Price</label>
+    <input type="number" [(ngModel)]="search.price" min="10" max="50" step="1" (change)="changesHandler()">
+  </div>
+  <div>
+    <label>Cuisine</label>
+    <input type="text" [(ngModel)]="search.cuisine" (keyup)="changesHandler()"/>
+  </div>
+</div>

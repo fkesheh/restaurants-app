@@ -1,0 +1,16 @@
+<div class="cotainer">
+  <div class="result" *ngFor="let item of results">
+    <span>
+      <h1>{{ item.name }}</h1>
+      <div><span *ngFor="let i of [1,2,3,4,5]"><img class="star" *ngIf="item.customerRating >= i" src="assets/icons/star.svg" /></span></div>
+    </span>
+    <span>
+      <p><b>Distance:</b> {{ item.distance }}</p>
+      <p><b>Price:</b> {{ item.price }}</p>
+      <p><b>Cuisine:</b> {{ cuisineList[item.cuisineId] }}</p>
+    </span>
+  </div>
+  <div class="no-results" *ngIf="results?.length == 0">
+    <h1>No restaurant matches your criteria!</h1>
+  </div>
+</div>

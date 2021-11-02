@@ -1,0 +1,5 @@
+<app-search-bar (searchChanged)="searchChanged($event)"></app-search-bar>
+
+
+<app-results *ngIf="!pristine" [results]="searchResults | async"></app-results>
+<div *ngIf="pristine">Find a restaurant that matches your criteria!</div>
